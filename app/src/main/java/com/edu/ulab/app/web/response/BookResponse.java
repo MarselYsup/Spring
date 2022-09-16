@@ -1,12 +1,17 @@
-package com.edu.ulab.app.web.request;
+package com.edu.ulab.app.web.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
-public class BookRequest {
+@Builder
+public class BookResponse {
+    private Long bookId;
 
-    @Schema(description = "Title of Book", example = "Dead souls")
+    private Long userId;
+
+    @Schema(description = "Title of book", example = "Dead souls")
     private String title;
 
     @Schema(description = "First name and Last name of author", example = "Nikolai Gogol")
